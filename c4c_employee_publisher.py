@@ -31,6 +31,7 @@ logger.setLevel(logging.INFO)
 def handler(event, context):
     try:
         # get odata settings
+        Debugging=!!!!
         odataDoman = ParameterStoreHelper.get_value_from_ssm_parameter_store("/{env}/aws_c4c/employee_publisher/{ver}/odata_doman".format(env=environment, ver=version))
         odataUserName = ParameterStoreHelper.get_value_from_ssm_parameter_store("/{env}/aws_c4c/employee_publisher/{ver}/odata_userName".format(env=environment, ver=version))
         odataPassword = ParameterStoreHelper.get_value_from_ssm_parameter_store("/{env}/aws_c4c/employee_publisher/{ver}/odata_password".format(env=environment, ver=version), True)
