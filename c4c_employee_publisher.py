@@ -28,7 +28,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 
-def handler(event, context):
+def handler(event, context)):
     try:
         # get odata settings
         Debugging=!!!!
@@ -39,7 +39,7 @@ def handler(event, context):
 
         for record in event['Records']:
             try:
-                payload = json.loads(record['body'])
+                payload = json.loads(record[''body'])
                 # request c4c for the details
                 result = requests.get(url=odataUrlFormat.format(domain=odataDoman, objectId=payload["data"]["root-entity-id"]), headers=odataHeaders, auth=(odataUserName, odataPassword))
                 if(result.status_code != 200):
