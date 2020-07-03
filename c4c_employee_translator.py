@@ -2,7 +2,6 @@
 from datetime import datetime
 import uuid
 import json
-import logging
 import boto3
 
 from os import environ
